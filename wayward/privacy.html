@@ -1,0 +1,73 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Wayward — Privacy Policy</title><style>
+:root{--ink:#16243A;--accent:#2A6FDB;--muted:#5A6B86;--line:#E7ECF3;--bg:#F7F9FC}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:760px;margin:0 auto;padding:40px 22px 80px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:34px 30px;box-shadow:0 6px 28px rgba(16,40,80,.06)}
+h1{font-size:30px;letter-spacing:-.5px;margin:.2em 0 .1em}
+h2{font-size:21px;margin:1.6em 0 .4em;padding-top:.3em}
+h3{font-size:17px;color:var(--muted);margin:1.2em 0 .3em}
+a{color:var(--accent)}
+hr{border:none;border-top:1px solid var(--line);margin:2em 0}
+ul{padding-left:1.25em}
+li{margin:.25em 0}
+.upd{color:var(--muted);font-size:14px;margin-top:0}
+.nav{margin-bottom:18px;font-size:14px}
+.nav a{margin-right:16px;text-decoration:none}
+.foot{color:var(--muted);font-size:13px;text-align:center;margin-top:26px}
+em{color:var(--muted)}
+code{background:#eef1f6;padding:1px 5px;border-radius:5px;font-size:.9em}
+</style></head><body><div class="wrap"><div class="nav"><a href="../index.html">Körklar</a><a href="index.html">Wayward</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></div><div class="card"><h1>Privacy Policy for Wayward</h1>
+<p class="upd"><strong>Last Updated:</strong> 17 September 2026</p>
+<h2>Our Privacy Commitment</h2>
+<p>Wayward sends you to a random place near you. That means it has to know roughly where you are — and that is exactly why <strong>Wayward keeps that on your phone and the fewest possible outside services, and never on a server of ours.</strong></p>
+<p>Wayward is developed by an independent sole proprietor based in Sweden. <strong>We run no server, we never sell your data, we show no advertising, and your quest log, photos and notes never leave your device unless you choose to share them.</strong></p>
+<h2>Location Data</h2>
+<p>Wayward asks for location access, <strong>"When In Use" only</strong> — it never asks for background or "Always" access. This is what happens with it:</p>
+<ul><li><strong>Drawing a quest:</strong> your location, and a rounded bounding box around it, is sent to <strong>Apple MapKit</strong> (for directions and points of interest) and to the public <strong>OpenStreetMap Overpass API</strong> (to fetch land-use features such as parks, paths and water, so the point stays public and reachable). Your precise location is never stored by us, because there is no Wayward server to store it on.</li>
+<li><strong>Home location (optional):</strong> if you set a home location so quests avoid drawing too close to it, that location is stored only on your device and is never sent anywhere.</li>
+<li><strong>"Report unsafe spot":</strong> if you report a point as unsafe, the app adds a 200 metre exclusion around it on your device, and sends an anonymous signal to our analytics provider, TelemetryDeck, with the coordinates rounded to about 1 km. This signal cannot be traced back to your precise location or to you.</li>
+<li><strong>Nothing is uploaded to us.</strong> There is no Wayward server. We do not see, store or have access to your location.</li></ul>
+<p>You can revoke location access at any time in iOS Settings; Wayward simply cannot draw new quests without it.</p>
+<h2>Information Stored Locally on Your Device</h2>
+<p>Stored only on your device (SwiftData and UserDefaults) and <strong>not transmitted to us or to any server we control</strong>:</p>
+<ul><li><strong>Quest log:</strong> drawn points, missions, photos and notes you add, distance and time</li>
+<li><strong>Photos</strong> you choose to take or attach to a quest</li>
+<li><strong>Home location</strong>, if you set one</li>
+<li><strong>Excluded spots</strong> from "Report unsafe spot"</li>
+<li><strong>Settings:</strong> radius, ritual/RNG preferences, Pro status</li></ul>
+<h2>Photos and Camera</h2>
+<p>Wayward asks for camera and photo library access only at the moment you tap <strong>"Take photo"</strong> on a mission. Photos are attached to your quest log and stay on your device. They are only sent anywhere if you tap "Share" to share a quest's summary card yourself.</p>
+<h2>Analytics</h2>
+<p>Wayward uses <strong>TelemetryDeck</strong> to understand anonymous, aggregate usage — how many quests are drawn, whether they succeed, which missions are completed, and purchases. TelemetryDeck signals are not tied to your name, email or Apple ID, use no advertising identifier, and cannot be used to track you across other apps or websites. The signals we collect include: <code>quest.draw</code>, <code>quest.fail</code>, <code>quest.go</code>, <code>quest.arrived</code>, <code>mission.done</code>, <code>card.shared</code>, <code>card.saved</code>, <code>friend.shared</code>, <code>unsafe.reported</code>, <code>paywall.shown</code>, <code>purchase.yearly</code>, <code>purchase.lifetime</code>, <code>ritual.enabled</code> and <code>daylight.warned</code>.</p>
+<h2>Optional "Quantum" Randomness</h2>
+<p>If you turn on the optional "Quantum" theme, Wayward fetches 32 random numbers from <strong>random.org</strong> to seed the draw. No personal data is sent with this request — only a request for random bytes. This is off by default; the app otherwise uses Apple's built-in random number generator on your device.</p>
+<h2>Purchases (In-App Purchase)</h2>
+<p>Wayward offers an optional <strong>Pro</strong> upgrade through Apple's In-App Purchase system, as a yearly subscription or a one-time lifetime purchase. To manage purchases and restore them across your devices we use <strong>RevenueCat</strong>, a purchase-management service acting as our data processor.</p>
+<ul><li>The actual payment is handled entirely by <strong>Apple</strong>. We never see or receive your card number, bank details or billing address.</li>
+<li>RevenueCat receives a randomly generated <strong>app user ID</strong>, your purchase/receipt information and basic device/app data in order to validate the purchase and unlock Pro. This identifier is not your name and is not used to track you across other apps or websites.</li>
+<li>We use this information only to grant and restore your Pro access.</li></ul>
+<p>RevenueCat's own privacy information: <a href="https://www.revenuecat.com/privacy">https://www.revenuecat.com/privacy</a></p>
+<h2>Data We Do Not Collect</h2>
+<ul><li><strong>No accounts, no email, no passwords, no third-party login.</strong></li>
+<li><strong>No advertising or ad identifiers (IDFA).</strong> We display no ads.</li>
+<li><strong>No location data is ever stored on a server</strong>, because there is no Wayward server. We could not sell it if we wanted to; we do not have it.</li>
+<li><strong>No photos or quest content leave your device</strong> unless you choose to share a card yourself.</li>
+<li><strong>No user-generated content is shown to other users.</strong> Unsafe-spot reports are private signals, not a public feed.</li></ul>
+<h2>Data Sharing and Third Parties</h2>
+<p>The third parties involved are <strong>Apple</strong> (app distribution, payment processing, MapKit directions and points of interest), <strong>OpenStreetMap's Overpass API</strong> (public land-use data, queried with a rounded bounding box only), <strong>random.org</strong> (only if you enable the optional Quantum theme, no personal data sent), <strong>TelemetryDeck</strong> (anonymous usage analytics, described above) and <strong>RevenueCat</strong> (purchase validation and restoration, described above). No data brokers, no advertising networks, no social-media trackers.</p>
+<h2>Your Rights</h2>
+<p>As a Sweden/EU-based developer we follow the <strong>General Data Protection Regulation (GDPR)</strong> for everyone who uses the app, wherever they are. Because almost all of your data lives on your device, you are in direct control of it:</p>
+<ul><li><strong>Access &amp; portability:</strong> your quest log, photos and notes are visible in the app at any time</li>
+<li><strong>Rectification:</strong> edit or delete any quest, photo or note at any time</li>
+<li><strong>Erasure:</strong> delete individual quests, or all local data by deleting the app; purchase data held by our processor can be deleted on request by contacting us</li>
+<li><strong>Objection/restriction:</strong> you can use the app's free quests without making any purchase, and without enabling the optional Quantum theme</li></ul>
+<p>To exercise any right, contact us (below). EU/EEA residents may also lodge a complaint with a supervisory authority such as the Swedish <strong>Integritetsskyddsmyndigheten (IMY)</strong>.</p>
+<h2>Children's Privacy</h2>
+<p>Wayward is rated for ages 12 and up on the App Store. The app's safety guidance asks anyone under 18 to bring an adult or a friend when going on a quest (see <a href="terms.html">Terms of Use</a>). We do not knowingly collect personal data from children beyond the on-device, non-identifying usage described above.</p>
+<h2>Changes to This Policy</h2>
+<p>If the app ever starts to collect or process data differently, this page will be updated and the date at the top changed. Material changes will also be mentioned in the app's release notes.</p>
+<h2>Contact</h2>
+<p>Questions or requests: <a href="mailto:avelan.sverige@gmail.com">avelan.sverige@gmail.com</a></p>
+<p><em>Wayward is an independent app and has no affiliation with Randonautica or any other app.</em></p>
+</div><p class="foot">© 2026 Amir Alagic · Sweden · <a href="mailto:avelan.sverige@gmail.com">avelan.sverige@gmail.com</a></p></div></body></html>
