@@ -18,7 +18,7 @@ li{margin:.25em 0}
 em{color:var(--muted)}
 code{background:#eef1f6;padding:1px 5px;border-radius:5px;font-size:.9em}
 </style></head><body><div class="wrap"><div class="nav"><a href="../index.html">Körklar</a><a href="index.html">Körlogg</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></div><div class="card"><h1>Privacy Policy for Körlogg</h1>
-<p class="upd"><strong>Last Updated:</strong> 6 September 2026</p>
+<p class="upd"><strong>Last Updated:</strong> 23 September 2026</p>
 <h2>Our Privacy Commitment</h2>
 <p>A mileage log knows where you drive. That is exactly why <strong>Körlogg keeps it on your phone and nowhere else.</strong></p>
 <p>Körlogg is a körjournal (mileage log) app for drivers in Sweden, developed by an independent sole proprietor based in Sweden. <strong>We run no server, we never sell your data, we show no advertising, and your trips never leave your device unless you export them yourself.</strong></p>
@@ -30,6 +30,16 @@ code{background:#eef1f6;padding:1px 5px;border-radius:5px;font-size:.9em}
 <li><strong>Addresses</strong> are looked up on the device using Apple's geocoder. The route points of a trip are kept for 30 days so a merged trip can be split, then reduced to the start and end point.</li>
 <li><strong>Nothing is uploaded.</strong> There is no Körlogg server. Your employer, or anyone else, cannot watch you through this app; they only ever see a report you choose to send them.</li></ul>
 <p>You can turn automatic logging off in <em>More</em> at any time, or revoke location access in iOS Settings.</p>
+<h2>On Android</h2>
+<p>Körlogg for Android works the same way, with Android's own building blocks:</p>
+<ul>
+<li><strong>Location "Allow all the time"</strong> lets a trip start by itself while the app is closed. GPS runs only during a trip, inside a foreground service, and Android shows a notification ("Trip in progress") for as long as it runs. With "Only while using the app" you start trips yourself.</li>
+<li><strong>Physical activity</strong> (Google Play services activity recognition) is used only to notice that you got into a vehicle, so GPS can stay off the rest of the time.</li>
+<li>A small <strong>geofence</strong> around where the car was last parked, kept by Google Play services on the phone, is a second way to notice a trip starting.</li>
+<li><strong>Addresses</strong> are looked up with Android's built-in geocoder, provided on the device by Google Play services.</li>
+<li>Trips are stored in the app's private database on the phone. Nothing is uploaded; there is still no Körlogg server.</li>
+<li>Purchases go through <strong>Google Play Billing</strong>; Google handles the payment and RevenueCat validates it exactly as described below.</li>
+</ul>
 <h2>Information Stored Locally on Your Device</h2>
 <p>Stored only on your device (SwiftData and UserDefaults) and <strong>not transmitted to us or to any server we control</strong>:</p>
 <ul><li><strong>Trips:</strong> dates, times, start and end positions and addresses, distance, odometer readings, purpose, visited places or people, driver name, notes, business/private classification</li>
@@ -52,7 +62,7 @@ code{background:#eef1f6;padding:1px 5px;border-radius:5px;font-size:.9em}
 <li><strong>No camera, microphone, photos or contacts access.</strong></li>
 <li><strong>No location data ever reaches us.</strong> We could not sell it if we wanted to; we do not have it.</li></ul>
 <h2>Data Sharing and Third Parties</h2>
-<p>The only third parties involved are <strong>Apple</strong> (app distribution, payment processingand on-device geocoding, subject to Apple's privacy policy) and <strong>RevenueCat</strong> (purchase validation and restoration, as described above). No data brokers, no advertising networks, no social-media trackers.</p>
+<p>The only third parties involved are <strong>Apple</strong> on iPhone and <strong>Google</strong> on Android (app distribution, payment processing and on-device geocoding and activity recognition, subject to their privacy policies) and <strong>RevenueCat</strong> (purchase validation and restoration, as described above). No data brokers, no advertising networks, no social-media trackers.</p>
 <h2>Your Rights</h2>
 <p>As a Sweden/EU-based developer we follow the <strong>General Data Protection Regulation (GDPR)</strong> for everyone who uses the app, wherever they are. Because your data lives on your device, you are in direct control of it:</p>
 <ul><li><strong>Access &amp; portability:</strong> every trip is visible in the app and exportable as PDF or CSV</li>
