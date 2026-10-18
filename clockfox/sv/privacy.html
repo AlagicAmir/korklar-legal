@@ -1,0 +1,182 @@
+<!doctype html><html lang="sv"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ClockFox — Integritetspolicy</title><style>
+:root{--ink:#16243A;--accent:#2A6FDB;--muted:#5A6B86;--line:#E7ECF3;--bg:#F7F9FC}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:760px;margin:0 auto;padding:40px 22px 80px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:34px 30px;box-shadow:0 6px 28px rgba(16,40,80,.06)}
+h1{font-size:30px;letter-spacing:-.5px;margin:.2em 0 .1em}
+h2{font-size:21px;margin:1.6em 0 .4em;padding-top:.3em}
+h3{font-size:17px;color:var(--muted);margin:1.2em 0 .3em}
+a{color:var(--accent)}
+hr{border:none;border-top:1px solid var(--line);margin:2em 0}
+ul{padding-left:1.25em}
+li{margin:.25em 0}
+.upd{color:var(--muted);font-size:14px;margin-top:0}
+.nav{margin-bottom:18px;font-size:14px}
+.nav a{margin-right:16px;text-decoration:none}
+.foot{color:var(--muted);font-size:13px;text-align:center;margin-top:26px}
+em{color:var(--muted)}
+code{background:#eef1f6;padding:1px 5px;border-radius:5px;font-size:.9em}
+</style></head><body><div class="wrap"><div class="nav"><a href="../index.html">ClockFox</a><a href="privacy.html">Integritet</a><a href="terms.html">Villkor</a><a href="../support.html">Support</a><a href="../privacy.html">English</a></div><div class="card"><h1>Integritetspolicy för ClockFox</h1>
+<p class="upd"><strong>Senast uppdaterad:</strong> 18 oktober 2026 · <a href="../privacy.html">English</a> · <a href="../de/privacy.html">Deutsch</a> · <a href="../es/privacy.html">Español</a> · <a href="../pl/privacy.html">Polski</a></p>
+<h2>Vårt löfte</h2>
+<p>En app för arbetstid vet var och när du jobbar. Just därför <strong>sparar ClockFox dina timmar och platser på din telefon, och aldrig på en server hos oss.</strong></p>
+<p>ClockFox är en app som automatiskt registrerar din arbetstid på iPhone och Android, utvecklad av en enskild firma i Sverige. <strong>Det finns inget konto och ingen ClockFox-server. Vi säljer aldrig dina uppgifter, visar ingen reklam, appen innehåller inga analys- eller spårningsverktyg, och dina timmar och platser når aldrig oss.</strong> De lämnar telefonen bara i en fil som du själv exporterar eller säkerhetskopierar, i den automatiska säkerhetskopian som sparas i din egen iCloud Drive (iPhone) eller i Androids egen säkerhetskopia till ditt Google-konto. Adressökning och kartor skickar bara söktexten eller kartområdet som behövs. Köp kontrolleras via RevenueCat (se <em>Köp</em>), som aldrig får dina timmar eller platser.</p>
+
+<h2>Platsdata</h2>
+<p>ClockFox använder platsen till en sak: att registrera din arbetstid på arbetsplatserna du har sparat, genom att stämpla in dig när du kommer och ut när du går. Så här används den.</p>
+<h3>På iPhone</h3>
+<ul>
+<li><strong>Arbetsplatser:</strong> när du sparar en arbetsplats sparas dess position och radie (150 m om du inte ändrar den; 100–500 m) på telefonen.</li>
+<li><strong>Automatisk stämpling (åtkomst ”Alltid”):</strong> iOS bevakar dina sparade arbetsplatser (upp till 20, de närmaste först) och, om du har sparat det, ditt hem, och meddelar ClockFox när du kommer dit eller går därifrån, även när appen är stängd. Det är iOS strömsnåla platsbevakning, inte ständig GPS. När appen öppnas frågar den också iOS om du redan är inne på en arbetsplats, så att en ankomst som iOS inte rapporterade inte går förlorad.</li>
+<li><strong>Bekräfta ankomst och avfärd:</strong> ClockFox väntar några minuter innan en ankomst räknas (1–15 minuter, ställs in under <em>Inställningar › Tidmätning</em>) eller en avfärd (3–15 minuter), så att du inte stämplas in när du bara går förbi. Under väntetiden får appen ungefärliga positioner (cirka 100 m) i bakgrunden; de slutar så fort inget väntar. Positionerna används just då och sparas inte, utom i spårningsloggen som beskrivs nedan.</li>
+<li><strong>Det här sparas:</strong> för varje ankomst och avfärd arbetsplatsen, tiden och hur exakt iOS angav att positionen var (i meter), men inte koordinaterna. Av detta bygger appen dina pass: start, slut och raster.</li>
+<li><strong>Vistelser (med åtkomst ”Alltid”):</strong> iOS rapporterar platser där du har stannat en stund. ClockFox sparar dessa vistelser (position, ankomst och avfärd) på telefonen och raderar vistelser som är äldre än 30 dagar. De används på två sätt:
+<ul>
+<li><strong>För att fylla i en missad ankomst till en sparad arbetsplats.</strong> Om iOS rapporterar en ankomst sent, eller inte alls, används en vistelse inne i arbetsplatsens cirkel för ankomsttiden. En avslutad vistelse från de senaste två dagarna på en arbetsplats där inget pass fanns vid den tiden blir ett automatiskt pass. Bara vistelser som började efter att arbetsplatsen sparades (eller senast flyttades) räknas, ett sådant pass överlappar aldrig ett befintligt pass, och det görs inte för jobb med <em>Fråga innan instämpling</em> eller när automatisk stämpling är avstängd.</li>
+<li><strong>För förslag ”Är det här ditt jobb?”</strong> (på om du inte stänger av dem under <em>Inställningar › Tidmätning</em>): vistelser från den senaste veckan används för att föreslå en plats du inte har sparat. Platser du markerar som ”Inte jobb” kommer appen ihåg så att de inte föreslås igen.</li>
+</ul>
+På iPhone sparas vistelser så länge ClockFox har åtkomst ”Alltid”, även när förslagen är avstängda; ändrar du platsåtkomsten till ”Vid användning” eller ”Aldrig” upphör det.</li>
+<li><strong>Hem (frivilligt):</strong> om du sparar ditt hem används positionen för att ClockFox aldrig ska stämpla in dig när du är hemma, och för att det ska kunna räknas som en ankomst när du lämnar hemmet och redan är inne på en arbetsplats alldeles intill.</li>
+<li><strong>Spårningslogg:</strong> för felsökning visar <em>Inställningar › Tidmätning › Kontroll av tidmätning</em> de 20 senaste ankomst- och avfärdshändelserna och en logg över de 50 senaste besluten (tider, arbetsplatsernas namn och vad appen beslutade). På iPhone innehåller en loggrad för en ankomst eller avfärd också positionen som telefonen angav just då, om en färsk position fanns. Loggen stannar på telefonen.</li>
+<li><strong>Åtkomst ”Vid användning”:</strong> din position används när du trycker på <em>Använd nuvarande plats</em> eller för att centrera kartan. Du kan också stämpla in och ut för hand, från en widget eller med Siri och Genvägar, helt utan platsåtkomst.</li>
+</ul>
+<h3>På Android</h3>
+<ul>
+<li><strong>Arbetsplatser:</strong> precis som på iPhone har varje sparad arbetsplats en position och en radie (150 m om du inte ändrar den).</li>
+<li><strong>Automatisk stämpling (”Tillåt alltid”):</strong> ClockFox lägger ett <strong>geofence</strong> runt varje sparad arbetsplats (och ditt hem, om du har sparat det) hos Google Play-tjänster på telefonen, som meddelar appen när du kommer dit eller går därifrån, även när appen är stängd. Precis som på iPhone väntar appen några minuter innan en ankomst räknas (1–15 minuter, ställs in under <em>Inställningar › Automatisk stämpling</em>) eller en avfärd (5 minuter), och den sparar arbetsplatsen, tiden och noggrannheten för varje händelse, inte koordinaterna.</li>
+<li><strong>Nuvarande position:</strong> en position hämtas när du använder din nuvarande plats; en gång efter att du lagt till en arbetsplats, för att se om du redan är där; varje gång du öppnar appen eller går tillbaka till den medan automatisk stämpling är på och platsen får användas hela tiden, för att fånga en ankomst som geofencet inte rapporterade; och när du stämplar in från snabbinställningsrutan eller en appgenväg, för att välja arbetsplatsen du är på. Positionerna används just då och sparas inte.</li>
+<li><strong>Vistelser (medan förslagen ”Är det här ditt jobb?” är på och ClockFox får använda platsen hela tiden):</strong> appen ber Google Play-tjänster om en strömsnål position ungefär var tionde minut. Positioner nära varandra (inom 150 m) blir en vistelse; den pågående vistelsen och avslutade vistelser på minst 30 minuter sparas på telefonen, och avslutade vistelser raderas efter 14 dagar. De används på samma två sätt som på iPhone: för att fylla i en missad ankomst till en sparad arbetsplats (en vistelse som börjar inne i en arbetsplats cirkel räknas som ankomst, en sen ankomst flyttas tillbaka till vistelsens början, och en vistelse från de senaste två dagarna utan pass blir ett automatiskt pass; bara vistelser som började efter att arbetsplatsen sparades eller senast flyttades räknas, ett sådant pass överlappar aldrig ett befintligt pass, och jobb med <em>Fråga innan instämpling</em> räknas inte), och för att föreslå en plats du inte har sparat. Stänger du av förslagen upphör detta, och då sparas inga vistelser.</li>
+<li><strong>Spårningslogg:</strong> <em>Inställningar › Automatisk stämpling › Kontroll av spårning</em> visar de 20 senaste händelserna och en logg över de 50 senaste besluten (tider, arbetsplatsernas namn, noggrannhet och vad appen beslutade, inga koordinater). Den stannar på telefonen.</li>
+<li><strong>Adressökning</strong> görs med telefonens inbyggda adresstjänst i Android (Geocoder), som på de flesta telefoner kommer från Google. Texten du skriver skickas till den tjänsten. Googles integritetspolicy: <a href="https://policies.google.com/privacy?hl=sv">https://policies.google.com/privacy</a></li>
+<li><strong>Karta (Mapbox):</strong> när platsredigeraren visar en karta kommer den från <strong>Mapbox</strong> (Mapbox, Inc.), så kartan för området du tittar på hämtas från Mapbox servrar. Mapbox får de tekniska uppgifter som varje sådan förfrågan innehåller, till exempel din IP-adress, samt kartområdet och kartbitarna som hämtas. Mapbox telemetri (de användnings- och platshändelser som kartan kan skicka) är avstängd i appen; kvar finns bara Mapbox anonyma räkning av kartladdningar, som Mapbox debiterar efter och som inte går att stänga av. Inga timmar, pass eller namn skickas. Mapbox integritetspolicy: <a href="https://www.mapbox.com/legal/privacy">https://www.mapbox.com/legal/privacy</a></li>
+</ul>
+<h3>Kartor och adressökning på iPhone</h3>
+<p>Kartan i platsredigeraren (arbetsplatser och hem) är Apple Kartor (MapKit), så kartan för området som visas hämtas från Apple. När du söker efter en adress eller plats skickas texten du skriver till Apple för att hitta träffar. Apples integritetspolicy: <a href="https://www.apple.com/se/legal/privacy/">https://www.apple.com/se/legal/privacy/</a></p>
+<p><strong>Ingenting om din plats laddas upp till oss.</strong> Din arbetsgivare, eller någon annan, kan inte följa dig genom appen; de ser bara en rapport som du själv väljer att skicka. Du kan stänga av automatisk stämpling i appens inställningar när som helst, eller dra tillbaka platsåtkomsten i telefonens inställningar.</p>
+
+<h2>Det här sparas på din telefon</h2>
+<p>Sparas bara på din telefon och <strong>skickas inte till oss eller till någon server vi styr över</strong>:</p>
+<ul>
+<li><strong>Pass:</strong> start- och sluttider, raster, anteckningar, om passet registrerades automatiskt eller för hand, och de ursprungliga tiderna för varje pass du ändrar (en ändringslogg)</li>
+<li><strong>Ankomst- och avfärdshändelser</strong> och <strong>spårningsloggen</strong> enligt ovan</li>
+<li><strong>Jobb och arbetsplatser:</strong> namn, färger, positioner och radie, arbetsregler, måltimmar, timlön, regler för övertid och tillägg, helgdagsregion och löneperioder du anger</li>
+<li><strong>Ledighet och planering:</strong> semester, sjukdagar och annan ledighet, anteckningar per dag, planerade pass och löneperioder markerade som utbetalda</li>
+<li><strong>Hem, vistelser och platser markerade ”Inte jobb”</strong>, enligt ovan</li>
+<li><strong>Uppgifter för export</strong> som du kan fylla i (för- och efternamn, e-post, anställningsnummer, lönekoder). De skrivs bara in i filerna du exporterar.</li>
+<li><strong>Inställningar:</strong> landsstandard, språk, valuta, tidsformat, tema, val för notiser och en sparad kopia av din Pro-status</li>
+</ul>
+<p>På iPhone sparas uppgifterna med SwiftData och UserDefaults i en appgrupp som bara ClockFox, dess widgetar, dess Live Activity och dess Siri-genvägar på samma telefon kan läsa. På Android sparas de i appens privata databas och inställningar. ClockFox synkar inte mellan enheter.</p>
+
+<h2>Säkerhetskopior</h2>
+<h3>Vad en säkerhetskopia innehåller</h3>
+<ul>
+<li>En säkerhetskopia är en <strong>förseglad <code>.clockfoxbackup</code>-fil</strong>: komprimerad och krypterad med en nyckel som finns i appen, så att bara ClockFox, på iPhone eller Android, kan återställa den. Den är till för återställning, inte ett skydd mot någon som har både filen och appen, så behandla den lika privat som dina timmar.</li>
+<li>Den innehåller dina jobb, arbetsplatser (med positioner), pass, raster, ändringar, ankomst- och avfärdshändelser, ledighet, anteckningar, planerade pass och markeringar av löneperioder, samt de inställningar som din historik bygger på: land, valuta, veckostart, avrundning, övertidsregel och ditt hem (med position), om du har sparat det. När du återställer en fil kommer även de inställningarna tillbaka.</li>
+<li>Den innehåller inte dina vistelser, platser markerade ”Inte jobb”, uppgifterna för export, spårningsloggen eller dina övriga inställningar (språk, tema, notiser, Pro-status).</li>
+</ul>
+<h3>På iPhone</h3>
+<ul>
+<li><strong>Automatisk säkerhetskopia varje dag</strong> (på om du inte stänger av den under <em>Inställningar › Data</em>): en gång om dagen skriver appen en säkerhetskopia. Om du är inloggad i iCloud med iCloud Drive påslaget sparas den i <strong>din egen iCloud Drive</strong> under <em>ClockFox › Backups</em>, där Apple förvarar den i ditt iCloud-konto enligt Apples integritetspolicy; annars sparas den under <em>Filer › På min iPhone › ClockFox › Backups</em>. De 30 senaste filerna sparas. Vi kan inte läsa någon av platserna.</li>
+<li><em>Säkerhetskopiera nu</em> skapar samma förseglade fil och öppnar delningsmenyn, så du väljer själv vart den går. <em>Återställ från fil</em> visar vad en fil innehåller innan den ersätter dina uppgifter. En läsbar kopia av all din data (vanlig JSON) är en Pro-export, precis som CSV; se <em>Export och delning</em>.</li>
+<li>Apples egen säkerhetskopia av iPhone (iCloud-säkerhetskopia eller dator) kan också innehålla appens data, som för alla appar.</li>
+</ul>
+<h3>På Android</h3>
+<ul>
+<li>Den automatiska dagliga säkerhetskopian, samma förseglade <code>.clockfoxbackup</code>-fil, sparas i appens privata lagring på telefonen; de 30 senaste filerna sparas. <em>Säkerhetskopiera nu</em> och <em>Återställ från säkerhetskopia</em> fungerar som på iPhone.</li>
+<li>Om säkerhetskopiering är påslagen för ditt Google-konto tar <strong>Androids egen säkerhetskopia</strong> (automatisk säkerhetskopiering, och överföring mellan enheter när du startar en ny telefon) med appens databas, inställningar och dessa filer. Den kopian förvaras av Google i ditt konto; vi kan inte läsa den.</li>
+</ul>
+
+<h2>Export och delning</h2>
+<p>Rapporter och filer (PDF, Excel, CSV, kalenderfiler, en vanlig JSON-kopia av all din data och filer för lön- och tidsprogram som PAXml, Visma, Harvest och Toggl) ingår i Pro. De skapas på telefonen och lämnas till delningsmenyn. Vart du skickar dem (e-post, Filer, din arbetsgivare eller lönekontoret) väljer du själv, och mottagarens villkor gäller.</p>
+<p><em>Dela ClockFox</em> öppnar delningsmenyn med en länk till appen i butiken. <em>Betygsätt ClockFox</em> öppnar butiken, där ditt betyg går till Apple eller Google, inte till oss.</p>
+<p><em>Kontakta support</em> öppnar din egen e-postapp med vår adress, ett ämne och appversion, enhetstyp och systemversion ifyllda; du kan ändra eller ta bort allt innan du skickar. Vi använder e-post bara för att svara dig och raderar den när den inte längre behövs.</p>
+
+<h2>Notiser, widgetar och genvägar</h2>
+<ul>
+<li><strong>Notiser</strong> (”Framme vid … – stämpla in?”, ”Fortfarande på jobbet?”, ”Jobbade du i dag?”, notiser vid ankomst och avfärd samt förslag) är lokala notiser som telefonen själv schemalägger. Det finns ingen push-server. Du väljer vilka du får under <em>Inställningar › Notiser</em>, och telefonen frågar om lov först.</li>
+<li><strong>Widgetar, Live Activity</strong> (iPhone), <strong>den pågående timernotisen och snabbinställningsrutan</strong> (Android) samt <strong>Siri och Genvägar</strong> (iPhone) läser dina uppgifter på telefonen. Live Activity på iPhones låsskärm och den pågående timernotisen på Android visar arbetsplatsens namn och arbetad tid för den som kan se skärmen.</li>
+</ul>
+
+<h2>Köp</h2>
+<p>ClockFox erbjuder en frivillig uppgradering, <strong>Pro</strong>: ett månads- eller årsabonnemang som förnyas automatiskt, eller ett engångsköp som gäller för alltid. Det finns ingen gratis provperiod.</p>
+<ul>
+<li><strong>Köpen hanteras av Apple eller Google:</strong> via Apples köp i appen på iPhone och Google Play Billing på Android. Betalningen sköts helt av dem; vi ser aldrig ditt kortnummer, dina bankuppgifter eller din faktureringsadress.</li>
+<li><strong>För att kontrollera vad du har köpt</strong>, låsa upp Pro och återställa det på en ny enhet använder appen <strong>RevenueCat</strong> (RevenueCat, Inc.), en tjänst för köphantering som behandlar uppgifterna för vår räkning (personuppgiftsbiträde). Appen kontaktar RevenueCat när den startar och när du tittar på, köper eller återställer Pro. RevenueCat får:
+<ul>
+<li>ett anonymt id som appen skapar (inte ditt namn och inte ett reklam-id)</li>
+<li>kvittot och transaktionsuppgifterna för köpet från Apple eller Google (vilken produkt, när den köptes, förnyades, sades upp eller återbetalades)</li>
+<li>enhetstyp och operativsystemets version, appens version och landet för App Store eller Google Play</li>
+<li>och, som vid alla anrop över internet, din IP-adress</li>
+</ul></li>
+<li><strong>Inget namn, ingen e-post och inga timmar, pass, platser eller positioner skickas till RevenueCat.</strong> Appen skickar inga andra uppgifter om dig och inga reklam-id till RevenueCat.</li>
+<li>Vi använder uppgifterna bara för att ge och återställa din Pro-åtkomst.</li>
+</ul>
+<p>RevenueCats integritetspolicy: <a href="https://www.revenuecat.com/privacy">https://www.revenuecat.com/privacy</a></p>
+
+<h2>Ingen analys</h2>
+<p>ClockFox innehåller <strong>inga verktyg för analys, användningsstatistik, kraschrapporter eller reklam</strong>. RevenueCat är inget analys- eller spårningsverktyg, men det är en tredje part som får köpuppgifterna som beskrivs under <em>Köp</em>. På Android är Mapbox telemetri avstängd enligt ovan. Appen gör inga egna nätverksanrop utöver de tjänster från Apple, Google, Mapbox och RevenueCat som beskrivs på den här sidan. Om du i telefonens inställningar har valt att dela analys- eller kraschdata med apputvecklare kan Apple eller Google visa oss sammanfattade kraschrapporter och statistik; det styr du själv i telefonens inställningar, och Apples eller Googles egna villkor gäller.</p>
+
+<h2>Det här samlar vi inte in</h2>
+<ul>
+<li><strong>Inga konton, inga lösenord, ingen inloggning.</strong></li>
+<li><strong>Ingen reklam och inga reklam-id (IDFA, Androids reklam-id).</strong></li>
+<li><strong>Ingen spårning mellan appar och ingen profilering.</strong></li>
+<li><strong>Ingen åtkomst till kamera, mikrofon, bilder eller kontakter.</strong></li>
+<li><strong>Inga timmar, pass, platser eller positioner når någonsin oss.</strong> Vi kunde inte sälja dem om vi ville; vi har dem inte.</li>
+</ul>
+
+<h2>Delning och tredje parter</h2>
+<p>De enda tredje parter som är inblandade är <strong>Apple</strong> på iPhone och <strong>Google</strong> på Android (distribution av appen, betalning, platstjänster, adressökning, kartor på iPhone och, om du använder dem, iCloud Drive eller Androids säkerhetskopia, enligt deras integritetspolicyer), <strong>Mapbox</strong> (kartor på Android) och <strong>RevenueCat</strong> (kontroll och återställning av köp), enligt ovan. Inga datamäklare, inga reklamnätverk, inga spårare från sociala medier.</p>
+
+<h2>Rättslig grund</h2>
+<p>Uppgifterna på din telefon behandlas av appen åt dig, och vi tar inte emot dem. När vi eller vårt personuppgiftsbiträde behandlar personuppgifter är den rättsliga grunden enligt GDPR: fullgörande av avtal när du köper Pro (kontrollera och återställa köpet via RevenueCat), och vårt berättigade intresse av att svara dig när du mejlar oss.</p>
+
+<h2>Dina rättigheter (GDPR och UK GDPR)</h2>
+<p>Vi finns i Sverige och följer <strong>dataskyddsförordningen (GDPR)</strong> för alla som använder appen, och <strong>UK GDPR</strong> för användare i Storbritannien. Eftersom dina uppgifter finns på din telefon bestämmer du själv över dem:</p>
+<ul>
+<li><strong>Tillgång och dataportabilitet:</strong> alla pass syns i appen; med Pro ger <em>Exportera all data</em> dig allt i en läsbar fil (JSON), och rapporter som CSV eller Excel</li>
+<li><strong>Rättelse:</strong> ändra pass, jobb, arbetsplatser och inställningar när som helst</li>
+<li><strong>Radering:</strong> radera pass, använd <em>Radera all data</em> eller ta bort appen (se nedan); uppgifter om köp hos vårt personuppgiftsbiträde raderas på begäran</li>
+<li><strong>Invändning och begränsning:</strong> du kan använda appen utan automatisk stämpling, utan förslag och utan att köpa något</li>
+</ul>
+<p>Hör av dig till oss (se nedan) om du vill använda någon av dina rättigheter. Du kan också klaga hos en tillsynsmyndighet: i Sverige <strong>Integritetsskyddsmyndigheten (IMY)</strong>, i Storbritannien <strong>Information Commissioner's Office (ICO)</strong>, eller myndigheten där du bor.</p>
+
+<h2>Rättigheter för användare i USA (bland annat Kalifornien)</h2>
+<p>Det här avsnittet gäller invånare i Kalifornien enligt California Consumer Privacy Act (CCPA), ändrad genom CPRA, och i andra amerikanska delstater med liknande lagar.</p>
+<ul>
+<li><strong>Vad vi samlar in:</strong> de enda personuppgifter som når oss eller vårt personuppgiftsbiträde är det anonyma app-id:t och köpuppgifterna under <em>Köp</em> (identifierare och kommersiell information), som bara används för att ge dig Pro, samt e-post som du skickar till oss.</li>
+<li><strong>Känsliga personuppgifter:</strong> din exakta position används på telefonen för att registrera dina timmar. Den skickas aldrig till oss, och vi använder den inte för att dra slutsatser om dig.</li>
+<li><strong>Ingen försäljning eller delning:</strong> vi säljer inte dina personuppgifter och delar dem inte för riktad reklam, och har inte gjort det under de senaste 12 månaderna.</li>
+<li><strong>Dina rättigheter:</strong> du kan begära att få veta vilka personuppgifter vi har om dig, få dem rättade eller raderade, och du behandlas inte annorlunda för att du använder dessa rättigheter. Skicka begäran till adressen nedan; vi behöver köpuppgifterna för att hitta posten.</li>
+</ul>
+
+<h2>Radera dina uppgifter</h2>
+<ul>
+<li><strong>Enskilda pass</strong> kan raderas i appen.</li>
+<li><strong><em>Inställningar › Data › Radera all data</em></strong> (med två bekräftelser) tar bort dina pass, raster, ändringar, ankomst- och avfärdshändelser, jobb, arbetsplatser, ledighet, anteckningar, planerade pass och markeringar av löneperioder från telefonen, och även ditt hem, vistelser, platser markerade ”Inte jobb”, uppgifterna för export och säkerhetskopiorna som sparats på telefonen. Arbetsreglerna återställs till ditt lands standard. På Android töms även spårningsloggen. På iPhone töms spårningsloggen (högst 50 rader) inte av <em>Radera all data</em>; äldre rader försvinner när nya tillkommer, och loggen tas bort när du tar bort appen. Säkerhetskopior i din iCloud Drive behålls, om du inte väljer <em>Radera även säkerhetskopiorna i iCloud Drive</em> i den första bekräftelsen.</li>
+<li><strong>Om du tar bort appen</strong> försvinner allt den sparat på telefonen, även ditt hem, vistelser, spårningsloggen och uppgifterna för export (och på Android säkerhetskopiorna). Säkerhetskopior i din iCloud Drive ligger kvar i din iCloud tills du raderar dem i appen Filer eller under <em>Inställningar › ditt namn › iCloud</em>; en säkerhetskopia från Android i ditt Google-konto hanteras av Google.</li>
+<li><strong>Köpuppgifter hos RevenueCat:</strong> mejla oss med ämnet ”ClockFox data deletion” och datum för köpet samt Apples kvittoreferens eller Google Plays ordernummer (GPA.…). Vi raderar posten inom 30 dagar och bekräftar via e-post. Därefter kan ett köp inte återställas på en ny enhet; Apple och Google sparar sin egen köphistorik enligt sina egna villkor.</li>
+</ul>
+
+<h2>Barn</h2>
+<p>ClockFox är till för människor som arbetar och riktar sig inte till barn. Appen samlar inte medvetet in personuppgifter om barn, och eftersom inget konto eller någon profil skapas finns inget som vi har om ett barn.</p>
+
+<h2>Säkerhet</h2>
+<ul>
+<li>iOS och Android håller appens data åtskild från andra appar och krypterar den på enheten när telefonen är låst med en kod</li>
+<li>Dina timmar och platser skickas inte till någon server som vi driver</li>
+<li>Köpuppgifter skickas krypterat mellan Apple eller Google, RevenueCat och din telefon</li>
+</ul>
+
+<h2>Ändringar</h2>
+<p>Om appen börjar samla in eller behandla uppgifter på ett annat sätt uppdaterar vi den här sidan först, med nytt datum överst. Större ändringar nämns också i appens versionsinformation.</p>
+
+<h2>Kontakt</h2>
+<ul>
+<li><strong>App:</strong> ClockFox, automatisk registrering av arbetstid</li>
+<li><strong>Personuppgiftsansvarig:</strong> Amir Alagic, enskild firma, Sverige</li>
+<li><strong>E-post:</strong> <a href="mailto:support@korlogg.com">support@korlogg.com</a></li>
+</ul>
+<p><em>ClockFox är inte kopplad till någon arbetsgivare, något fackförbund, någon lönetjänst eller myndighet.</em></p>
+</div><p class="foot">© 2026 Amir Alagic · Sverige · <a href="mailto:support@korlogg.com">support@korlogg.com</a></p></div></body></html>

@@ -1,0 +1,182 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ClockFox — Política de privacidad</title><style>
+:root{--ink:#16243A;--accent:#2A6FDB;--muted:#5A6B86;--line:#E7ECF3;--bg:#F7F9FC}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:760px;margin:0 auto;padding:40px 22px 80px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:34px 30px;box-shadow:0 6px 28px rgba(16,40,80,.06)}
+h1{font-size:30px;letter-spacing:-.5px;margin:.2em 0 .1em}
+h2{font-size:21px;margin:1.6em 0 .4em;padding-top:.3em}
+h3{font-size:17px;color:var(--muted);margin:1.2em 0 .3em}
+a{color:var(--accent)}
+hr{border:none;border-top:1px solid var(--line);margin:2em 0}
+ul{padding-left:1.25em}
+li{margin:.25em 0}
+.upd{color:var(--muted);font-size:14px;margin-top:0}
+.nav{margin-bottom:18px;font-size:14px}
+.nav a{margin-right:16px;text-decoration:none}
+.foot{color:var(--muted);font-size:13px;text-align:center;margin-top:26px}
+em{color:var(--muted)}
+code{background:#eef1f6;padding:1px 5px;border-radius:5px;font-size:.9em}
+</style></head><body><div class="wrap"><div class="nav"><a href="../index.html">ClockFox</a><a href="privacy.html">Privacidad</a><a href="terms.html">Condiciones</a><a href="../support.html">Soporte</a><a href="../privacy.html">English</a></div><div class="card"><h1>Política de privacidad de ClockFox</h1>
+<p class="upd"><strong>Última actualización:</strong> 18 de octubre de 2026 · <a href="../privacy.html">English</a> · <a href="../sv/privacy.html">Svenska</a> · <a href="../de/privacy.html">Deutsch</a> · <a href="../pl/privacy.html">Polski</a></p>
+<h2>Nuestro compromiso</h2>
+<p>Una app de horas de trabajo sabe dónde y cuándo trabaja usted. Precisamente por eso <strong>ClockFox guarda sus horas y lugares en su teléfono, y nunca en un servidor nuestro.</strong></p>
+<p>ClockFox es una app que registra automáticamente las horas de trabajo en iPhone y Android, desarrollada por un empresario individual (autónomo) en Suecia. <strong>No hay cuenta ni servidor de ClockFox. Nunca vendemos sus datos, no mostramos publicidad, la app no contiene herramientas de análisis ni de seguimiento, y sus horas y ubicaciones nunca nos llegan.</strong> Solo salen del teléfono en un archivo que usted mismo exporta o guarda como copia, en la copia de seguridad automática que se guarda en su propio iCloud Drive (iPhone) o en la copia de seguridad propia de Android en su cuenta de Google. La búsqueda de direcciones y los mapas envían solo el texto buscado o la zona del mapa que necesitan. Las compras se comprueban a través de RevenueCat (véase <em>Compras</em>), que nunca recibe sus horas ni sus ubicaciones.</p>
+
+<h2>Datos de ubicación</h2>
+<p>ClockFox usa la ubicación para una sola cosa: registrar su tiempo de trabajo en los lugares de trabajo que ha guardado, fichando su entrada cuando llega y su salida cuando se va. Esto es lo que ocurre con ella.</p>
+<h3>En iPhone</h3>
+<ul>
+<li><strong>Lugares de trabajo:</strong> al guardar un lugar de trabajo, su posición y su radio (150 m si no lo cambia; de 100 a 500 m) se guardan en el teléfono.</li>
+<li><strong>Fichaje automático (acceso «Siempre»):</strong> la supervisión de regiones de iOS vigila sus lugares de trabajo guardados (hasta 20, primero los más cercanos) y, si la ha guardado, su casa, y avisa a ClockFox cuando entra o sale de uno, también con la app cerrada. Es la supervisión de lugares de bajo consumo de iOS, no un GPS continuo. Al abrirse, la app también pregunta a iOS si ya está dentro de un lugar de trabajo, para que no se pierda una llegada que iOS no comunicó.</li>
+<li><strong>Confirmar una llegada o una salida:</strong> ClockFox espera unos minutos antes de contar una llegada (de 1 a 15 minutos, se ajusta en <em>Ajustes › Registro</em>) o una salida (de 3 a 15 minutos), para que pasar por delante de la puerta no inicie un turno. Mientras espera, la app recibe posiciones aproximadas (unos 100 m) en segundo plano; se detienen en cuanto no queda nada pendiente. Estas posiciones se usan en ese momento y no se guardan, salvo en el registro de seguimiento descrito más abajo.</li>
+<li><strong>Qué se guarda:</strong> de cada llegada y salida, el lugar de trabajo, la hora y la precisión de la posición indicada por iOS (en metros), pero no las coordenadas. Con ello la app forma sus turnos: inicio, fin y pausas.</li>
+<li><strong>Estancias (con acceso «Siempre»):</strong> iOS informa de los lugares donde ha permanecido un rato. ClockFox guarda estas estancias (posición, llegada y salida) en el teléfono y elimina las de más de 30 días. Se usan de dos formas:
+<ul>
+<li><strong>Para completar una llegada perdida a un lugar de trabajo guardado.</strong> Si iOS comunica una llegada tarde, o no la comunica, se usa una estancia dentro del círculo del lugar de trabajo para la hora de llegada. Una estancia terminada de los últimos dos días en un lugar de trabajo sin turno a esa hora se convierte en un turno automático. Solo cuentan las estancias que empezaron después de guardar (o mover por última vez) el lugar de trabajo, ese turno nunca se solapa con uno existente, y no se hace para trabajos con <em>Preguntar antes de fichar</em> ni con el fichaje automático desactivado.</li>
+<li><strong>Para las sugerencias «¿Es este su trabajo?»</strong> (activadas salvo que las desactive en <em>Ajustes › Registro</em>): se usan las estancias de la última semana para sugerir un lugar que no ha guardado. Los lugares que marca como «No es trabajo» se recuerdan para no volver a sugerirlos.</li>
+</ul>
+En iPhone las estancias se registran mientras ClockFox tenga acceso «Siempre», también con las sugerencias desactivadas; si cambia el acceso a la ubicación a «Cuando se use la app» o «Nunca», se detienen.</li>
+<li><strong>Casa (opcional):</strong> si guarda su casa, su posición se usa para que ClockFox nunca registre su entrada mientras está en casa, y para que salir de casa pueda contar como llegada a un lugar de trabajo situado justo al lado.</li>
+<li><strong>Registro de seguimiento:</strong> para resolver problemas, <em>Ajustes › Registro › Comprobación del registro</em> muestra los últimos 20 eventos de llegada y salida y un registro de las últimas 50 decisiones (horas, nombres de los lugares de trabajo y lo que decidió la app). En iPhone, una entrada de llegada o salida contiene además la posición que el teléfono indicó en ese momento, si había una reciente. El registro se queda en el teléfono.</li>
+<li><strong>Acceso «Cuando se use la app»:</strong> su posición actual se usa cuando pulsa <em>Usar ubicación actual</em> o para centrar el mapa. También puede fichar a mano, desde un widget o con Siri y Atajos, sin ningún acceso a la ubicación.</li>
+</ul>
+<h3>En Android</h3>
+<ul>
+<li><strong>Lugares de trabajo:</strong> igual que en iPhone, cada lugar de trabajo guardado tiene una posición y un radio (150 m si no lo cambia).</li>
+<li><strong>Fichaje automático («Permitir todo el tiempo»):</strong> ClockFox registra una <strong>geovalla</strong> alrededor de cada lugar de trabajo guardado (y de su casa, si la ha guardado) en los servicios de Google Play del teléfono, que avisan a la app cuando entra o sale, también con la app cerrada. Igual que en iPhone, la app espera unos minutos antes de contar una llegada (de 1 a 15 minutos, se ajusta en <em>Ajustes › Fichaje automático</em>) o una salida (5 minutos), y guarda el lugar de trabajo, la hora y la precisión de cada evento, no las coordenadas.</li>
+<li><strong>Posición actual:</strong> se pide una posición cuando usa su ubicación actual; una vez después de añadir un lugar de trabajo, para ver si ya está allí; cada vez que abre la app o vuelve a ella mientras el fichaje automático está activado y la ubicación está permitida todo el tiempo, para detectar una llegada que la geovalla no comunicó; y cuando ficha desde el icono de ajustes rápidos o un acceso directo de la app, para elegir el lugar de trabajo en el que está. Estas posiciones se usan en ese momento y no se guardan.</li>
+<li><strong>Estancias (mientras las sugerencias «¿Es este su trabajo?» estén activadas y ClockFox pueda usar la ubicación todo el tiempo):</strong> la app pide a los servicios de Google Play una posición de bajo consumo aproximadamente cada diez minutos. Las posiciones cercanas entre sí (a menos de 150 m) forman una estancia; la estancia en curso y las estancias terminadas de al menos 30 minutos se guardan en el teléfono, y las terminadas se eliminan a los 14 días. Se usan de las mismas dos formas que en iPhone: para completar una llegada perdida a un lugar de trabajo guardado (una estancia que empieza dentro del círculo de un lugar de trabajo cuenta como llegada, una llegada tardía se adelanta al inicio de la estancia, y una estancia de los últimos dos días sin turno se convierte en un turno automático; solo cuentan las estancias que empezaron después de guardar o mover por última vez el lugar de trabajo, ese turno nunca se solapa con uno existente y los trabajos con <em>Preguntar antes de fichar</em> quedan excluidos) y para sugerir un lugar que no ha guardado. Si desactiva las sugerencias, esto se detiene y no se registran estancias.</li>
+<li><strong>Registro de seguimiento:</strong> <em>Ajustes › Fichaje automático › Comprobación del registro</em> muestra los últimos 20 eventos y un registro de las últimas 50 decisiones (horas, nombres de los lugares de trabajo, precisión y lo que decidió la app, sin coordenadas). Se queda en el teléfono.</li>
+<li><strong>La búsqueda de direcciones</strong> usa el servicio de direcciones integrado de Android (Geocoder), que en la mayoría de los teléfonos proporciona Google. El texto que escribe se envía a ese servicio. Política de privacidad de Google: <a href="https://policies.google.com/privacy?hl=es">https://policies.google.com/privacy</a></li>
+<li><strong>Mapa (Mapbox):</strong> cuando el editor de lugares muestra un mapa, lo proporciona <strong>Mapbox</strong> (Mapbox, Inc.), por lo que el mapa de la zona que mira se carga desde los servidores de Mapbox. Mapbox recibe los datos técnicos que lleva cualquier solicitud de este tipo, como su dirección IP, y la zona del mapa y las teselas solicitadas. La telemetría de Mapbox (los eventos de uso y de ubicación que puede enviar su mapa) está desactivada en la app; solo queda el recuento anónimo de cargas del mapa, por el que Mapbox factura y que no se puede desactivar. No se envían horas, turnos ni nombres. Política de privacidad de Mapbox: <a href="https://www.mapbox.com/legal/privacy">https://www.mapbox.com/legal/privacy</a></li>
+</ul>
+<h3>Mapas y búsqueda de direcciones en iPhone</h3>
+<p>El mapa del editor de lugares (lugares de trabajo y casa) es Apple Maps (MapKit), por lo que el mapa de la zona mostrada se carga desde Apple. Cuando busca una dirección o un lugar, el texto que escribe se envía a Apple para encontrar resultados. Política de privacidad de Apple: <a href="https://www.apple.com/es/legal/privacy/">https://www.apple.com/es/legal/privacy/</a></p>
+<p><strong>Nada sobre su ubicación se sube a nosotros.</strong> Su empleador, o cualquier otra persona, no puede seguirle a través de la app; solo ve un informe que usted decide enviarle. Puede desactivar el fichaje automático en los ajustes de la app en cualquier momento, o retirar el acceso a la ubicación en los ajustes del teléfono.</p>
+
+<h2>Información guardada en su dispositivo</h2>
+<p>Se guarda solo en su teléfono y <strong>no se transmite a nosotros ni a ningún servidor que controlemos</strong>:</p>
+<ul>
+<li><strong>Turnos:</strong> horas de inicio y fin, pausas, notas, si un turno se registró automáticamente o a mano, y las horas originales de cada turno que modifica (un registro de cambios)</li>
+<li><strong>Eventos de llegada y salida</strong> y el <strong>registro de seguimiento</strong>, como se describe arriba</li>
+<li><strong>Trabajos y lugares de trabajo:</strong> nombres, colores, posiciones y radio, reglas laborales, horas objetivo, salario por hora, reglas de horas extra y pluses, región de festivos y periodos de pago que introduce</li>
+<li><strong>Ausencias y planificación:</strong> vacaciones, días de baja y otras ausencias, notas del día, turnos planificados y periodos de pago marcados como pagados</li>
+<li><strong>Casa, estancias y lugares marcados como «No es trabajo»</strong>, como se describe arriba</li>
+<li><strong>Datos para la exportación</strong> que puede introducir (nombre y apellidos, correo electrónico, número de empleado, códigos de nómina). Solo se escriben en los archivos que exporta.</li>
+<li><strong>Ajustes:</strong> valores del país, idioma, moneda, formato de hora, tema, opciones de notificación y una copia guardada de su estado Pro</li>
+</ul>
+<p>En iPhone los datos se guardan con SwiftData y UserDefaults en un grupo de apps que solo pueden leer ClockFox, sus widgets, su Actividad en vivo y sus atajos de Siri en el mismo teléfono. En Android se guardan en la base de datos y los ajustes privados de la app. ClockFox no sincroniza entre dispositivos.</p>
+
+<h2>Copias de seguridad</h2>
+<h3>Qué contiene un archivo de copia de seguridad</h3>
+<ul>
+<li>Una copia de seguridad es un <strong>archivo sellado <code>.clockfoxbackup</code></strong>: comprimido y cifrado con una clave incluida en la app, de modo que solo ClockFox, en iPhone o Android, puede restaurarlo. Sirve para restaurar, no como protección frente a alguien que tenga tanto el archivo como la app, así que guárdelo con la misma privacidad que sus horas.</li>
+<li>Contiene sus trabajos, lugares de trabajo (con sus posiciones), turnos, pausas, cambios, eventos de llegada y salida, ausencias, notas del día, turnos planificados y marcas de periodos de pago, además de los ajustes de los que depende su historial: país, moneda, inicio de semana, redondeo, regla de horas extra y su casa (con su posición), si la ha guardado. Al restaurar un archivo, también se recuperan estos ajustes.</li>
+<li>No contiene sus estancias, los lugares marcados como «No es trabajo», los datos para la exportación, el registro de seguimiento ni sus demás ajustes (idioma, tema, notificaciones, estado Pro).</li>
+</ul>
+<h3>En iPhone</h3>
+<ul>
+<li><strong>Copia de seguridad diaria automática</strong> (activada salvo que la desactive en <em>Ajustes › Datos</em>): una vez al día la app escribe un archivo de copia. Si ha iniciado sesión en iCloud con iCloud Drive activado, se guarda en <strong>su propio iCloud Drive</strong> en <em>ClockFox › Backups</em>, donde Apple la conserva en su cuenta de iCloud según su política de privacidad; si no, se guarda en <em>Archivos › En mi iPhone › ClockFox › Backups</em>. Se conservan los 30 archivos más recientes. No podemos leer ninguna de las dos ubicaciones.</li>
+<li><em>Hacer copia ahora</em> crea el mismo archivo sellado y abre el menú de compartir, para que elija adónde va. <em>Restaurar desde archivo</em> muestra lo que contiene un archivo antes de que sustituya sus datos. Una copia legible de todos sus datos (JSON sencillo) es una exportación Pro, como CSV; véase <em>Exportación y compartir</em>.</li>
+<li>La copia de seguridad propia del iPhone de Apple (copia en iCloud o en un ordenador) también puede incluir los datos de la app, como con cualquier app.</li>
+</ul>
+<h3>En Android</h3>
+<ul>
+<li>La copia diaria automática, el mismo archivo sellado <code>.clockfoxbackup</code>, se guarda en el almacenamiento privado de la app en el teléfono; se conservan los 30 archivos más recientes. <em>Hacer copia ahora</em> y <em>Restaurar copia de seguridad</em> funcionan como en iPhone.</li>
+<li>Si la copia de seguridad está activada para su cuenta de Google, la <strong>copia de seguridad propia de Android</strong> (copia automática y transferencia entre dispositivos al configurar un teléfono nuevo) incluye la base de datos, los ajustes y estos archivos de la app. Esa copia la conserva Google en su cuenta; nosotros no podemos leerla.</li>
+</ul>
+
+<h2>Exportación y compartir</h2>
+<p>Los informes y archivos (PDF, Excel, CSV, archivos de calendario, una copia JSON simple de todos sus datos y archivos para programas de nómina y de control horario como PAXml, Visma, Harvest y Toggl) forman parte de Pro. Se crean en el teléfono y se entregan al menú de compartir. Adónde los envía (correo, Archivos, su empleador o el departamento de nóminas) lo decide usted, y se aplican las condiciones del destinatario.</p>
+<p><em>Compartir ClockFox</em> abre el menú de compartir con un enlace a la app en la tienda. <em>Valorar ClockFox</em> abre la tienda, donde su valoración va a Apple o Google, no a nosotros.</p>
+<p><em>Contactar con soporte</em> abre su propia app de correo con nuestra dirección, un asunto y la versión de la app, el modelo del teléfono y la versión del sistema ya escritos; puede cambiar o borrar cualquier cosa antes de enviar. Usamos los correos solo para responderle y los eliminamos cuando ya no son necesarios.</p>
+
+<h2>Notificaciones, widgets y atajos</h2>
+<ul>
+<li><strong>Las notificaciones</strong> («Ha llegado a … – ¿fichar entrada?», «¿Sigue en el trabajo?», «¿Ha trabajado hoy?», avisos de llegada y salida y sugerencias) son notificaciones locales que programa el propio teléfono. No hay servidor de notificaciones push. Usted elige cuáles recibe en <em>Ajustes › Notificaciones</em>, y el teléfono le pide permiso primero.</li>
+<li><strong>Los widgets, la Actividad en vivo</strong> (iPhone), <strong>la notificación del temporizador en curso y el icono de Ajustes rápidos</strong> (Android) y <strong>Siri y Atajos</strong> (iPhone) leen sus datos en el teléfono. La Actividad en vivo en la pantalla de bloqueo del iPhone y la notificación del temporizador en Android muestran el nombre del lugar de trabajo y el tiempo trabajado a cualquiera que pueda ver su pantalla.</li>
+</ul>
+
+<h2>Compras</h2>
+<p>ClockFox ofrece una mejora opcional, <strong>Pro</strong>: una suscripción mensual o anual de renovación automática, o una compra única de por vida. No hay periodo de prueba gratuito.</p>
+<ul>
+<li><strong>Las compras las procesan Apple o Google:</strong> mediante las compras dentro de la app de Apple en iPhone y Google Play Billing en Android. Ellos gestionan todo el pago; nunca vemos ni recibimos su número de tarjeta, sus datos bancarios ni su dirección de facturación.</li>
+<li><strong>Para comprobar qué ha comprado</strong>, desbloquear Pro y restaurarlo en un dispositivo nuevo, la app usa <strong>RevenueCat</strong> (RevenueCat, Inc.), un servicio de gestión de compras que trata estos datos por cuenta nuestra (encargado del tratamiento). La app contacta con RevenueCat al iniciarse y cuando usted ve, compra o restaura Pro. RevenueCat recibe:
+<ul>
+<li>un identificador anónimo generado por la app (no es su nombre ni un identificador publicitario)</li>
+<li>el recibo y los datos de la transacción de Apple o Google (qué producto, cuándo se compró, renovó, canceló o reembolsó)</li>
+<li>el tipo de dispositivo y la versión del sistema operativo, la versión de la app y el país de la App Store o de Google Play</li>
+<li>y, como en cualquier solicitud por internet, su dirección IP</li>
+</ul></li>
+<li><strong>A RevenueCat no se envían nombres, correos electrónicos, horas, turnos, lugares ni ubicaciones.</strong> La app no envía a RevenueCat otros datos sobre usted ni identificadores publicitarios.</li>
+<li>Usamos esta información solo para conceder y restaurar su acceso Pro.</li>
+</ul>
+<p>Política de privacidad de RevenueCat: <a href="https://www.revenuecat.com/privacy">https://www.revenuecat.com/privacy</a></p>
+
+<h2>Sin análisis</h2>
+<p>ClockFox <strong>no contiene herramientas de análisis, estadísticas de uso, informes de fallos ni publicidad</strong>. RevenueCat no es una herramienta de análisis ni de seguimiento, pero es un tercero que recibe los datos de compra descritos en <em>Compras</em>. En Android, la telemetría de Mapbox está desactivada, como se describe arriba. La app no hace solicitudes de red propias aparte de los servicios de Apple, Google, Mapbox y RevenueCat descritos en esta página. Si en los ajustes de su teléfono ha elegido compartir datos de análisis o de fallos con los desarrolladores, Apple o Google pueden mostrarnos informes de fallos y estadísticas resumidos; eso lo controla usted en los ajustes del teléfono y se rige por las políticas de Apple o Google.</p>
+
+<h2>Datos que no recogemos</h2>
+<ul>
+<li><strong>Sin cuentas, sin contraseñas, sin inicio de sesión.</strong></li>
+<li><strong>Sin publicidad ni identificadores publicitarios (IDFA, ID de publicidad de Android).</strong></li>
+<li><strong>Sin seguimiento entre apps y sin elaboración de perfiles.</strong></li>
+<li><strong>Sin acceso a la cámara, el micrófono, las fotos ni los contactos.</strong></li>
+<li><strong>Ninguna hora, turno, lugar ni ubicación nos llega nunca.</strong> No podríamos venderlos aunque quisiéramos; no los tenemos.</li>
+</ul>
+
+<h2>Cesión de datos y terceros</h2>
+<p>Los únicos terceros que intervienen son <strong>Apple</strong> en iPhone y <strong>Google</strong> en Android (distribución de la app, procesamiento de pagos, servicios de ubicación, búsqueda de direcciones, mapas en iPhone y, si los usa, iCloud Drive o la copia de seguridad de Android, según sus políticas de privacidad), <strong>Mapbox</strong> (mapas en Android) y <strong>RevenueCat</strong> (comprobación y restauración de compras), como se describe arriba. Sin intermediarios de datos, sin redes publicitarias, sin rastreadores de redes sociales.</p>
+
+<h2>Base jurídica</h2>
+<p>Los datos de su teléfono los trata la app para usted, y nosotros no los recibimos. Cuando nosotros o nuestro encargado tratamos datos personales, la base jurídica según el RGPD es: la ejecución del contrato cuando compra Pro (validar y restaurar la compra a través de RevenueCat) y nuestro interés legítimo en responderle cuando nos escribe.</p>
+
+<h2>Sus derechos (RGPD y UK GDPR)</h2>
+<p>Como desarrollador con sede en Suecia aplicamos el <strong>Reglamento General de Protección de Datos (RGPD)</strong> a todas las personas que usan la app, y el <strong>UK GDPR</strong> a los usuarios del Reino Unido. Como sus datos están en su teléfono, usted los controla directamente:</p>
+<ul>
+<li><strong>Acceso y portabilidad:</strong> todos los turnos se ven en la app; con Pro, <em>Exportar todos los datos</em> le da todo en un archivo legible (JSON), y los informes en CSV o Excel</li>
+<li><strong>Rectificación:</strong> modifique turnos, trabajos, lugares de trabajo y ajustes en cualquier momento</li>
+<li><strong>Supresión:</strong> elimine turnos, use <em>Eliminar todos los datos</em> o elimine la app (véase abajo); los datos de compra que conserva nuestro encargado se eliminan a petición</li>
+<li><strong>Oposición y limitación:</strong> puede usar la app sin fichaje automático, sin sugerencias y sin comprar nada</li>
+</ul>
+<p>Para ejercer cualquier derecho, contáctenos (abajo). También puede presentar una reclamación ante una autoridad de control: en España la <strong>Agencia Española de Protección de Datos (AEPD)</strong>, en Suecia la <strong>Integritetsskyddsmyndigheten (IMY)</strong>, en el Reino Unido la <strong>Information Commissioner's Office (ICO)</strong>, o la autoridad del lugar donde vive.</p>
+
+<h2>Derechos para residentes en EE. UU. (incluida California)</h2>
+<p>Esta sección se aplica a los residentes de California según la California Consumer Privacy Act (CCPA), modificada por la CPRA, y de otros estados de EE. UU. con leyes similares.</p>
+<ul>
+<li><strong>Qué recogemos:</strong> los únicos datos personales que nos llegan a nosotros o a nuestro encargado son el ID de usuario aleatorio y los datos de compra descritos en <em>Compras</em> (identificadores e información comercial), usados solo para ofrecerle Pro, y los correos que nos envía.</li>
+<li><strong>Datos personales sensibles:</strong> su ubicación precisa se usa en el teléfono para registrar sus horas. Nunca se nos envía y no la usamos para deducir nada sobre usted.</li>
+<li><strong>Sin venta ni cesión:</strong> no vendemos sus datos personales ni los compartimos para publicidad conductual entre contextos, y no lo hemos hecho en los últimos 12 meses.</li>
+<li><strong>Sus derechos:</strong> puede pedir saber qué datos personales tenemos sobre usted, que se corrijan o eliminen, y no recibirá un trato distinto por ejercer estos derechos. Envíe sus solicitudes a la dirección de abajo; necesitaremos el ID de usuario o los datos de compra para encontrar el registro.</li>
+</ul>
+
+<h2>Eliminar sus datos</h2>
+<ul>
+<li><strong>Los turnos individuales</strong> se pueden eliminar en la app.</li>
+<li><strong><em>Ajustes › Datos › Eliminar todos los datos</em></strong> (con dos confirmaciones) elimina del teléfono sus turnos, pausas, cambios, eventos de llegada y salida, trabajos, lugares de trabajo, ausencias, notas del día, turnos planificados y marcas de periodos de pago, así como su casa, las estancias, los lugares marcados como «No es trabajo», los datos para la exportación y las copias de seguridad guardadas en el teléfono. Las reglas laborales vuelven a los valores de su país. En Android también se vacía el registro de seguimiento. En iPhone el registro de seguimiento (como máximo 50 entradas) no se vacía con <em>Eliminar todos los datos</em>; las entradas antiguas desaparecen a medida que se añaden nuevas, y se elimina al borrar la app. Las copias de seguridad de su iCloud Drive se conservan, salvo que elija <em>Eliminar también las copias de seguridad en iCloud Drive</em> en la primera confirmación.</li>
+<li><strong>Al eliminar la app</strong> se borra todo lo que guardó en el teléfono, incluidos su casa, las estancias, el registro de seguimiento y los datos para la exportación (y en Android los archivos de copia de seguridad). Las copias de seguridad de su iCloud Drive permanecen en su iCloud hasta que las elimine en la app Archivos o en <em>Ajustes › su nombre › iCloud</em>; una copia de Android en su cuenta de Google la gestiona Google.</li>
+<li><strong>Datos de compra en RevenueCat:</strong> escríbanos con el asunto «ClockFox data deletion» indicando la fecha de la compra y la referencia del recibo de Apple o el número de pedido de Google Play (GPA.…). Eliminamos el registro en un plazo de 30 días y lo confirmamos por correo electrónico. Después, la compra no se podrá restaurar en un dispositivo nuevo; Apple y Google conservan su propio historial de compras según sus propias políticas.</li>
+</ul>
+
+<h2>Menores</h2>
+<p>ClockFox está pensada para personas que trabajan y no está dirigida a menores. No recoge de forma consciente datos personales de menores y, como no se crea ninguna cuenta ni perfil, no tenemos nada sobre un menor.</p>
+
+<h2>Seguridad</h2>
+<ul>
+<li>iOS y Android mantienen los datos de la app separados de otras apps y los cifran en el dispositivo cuando el teléfono está bloqueado con un código</li>
+<li>Sus horas y lugares no se envían a ningún servidor que gestionemos</li>
+<li>Los datos de compra viajan cifrados entre Apple o Google, RevenueCat y su teléfono</li>
+</ul>
+
+<h2>Cambios en esta política</h2>
+<p>Si la app empieza a recoger o tratar datos de otra manera, actualizaremos primero esta página y cambiaremos la fecha de arriba. Los cambios importantes también se mencionarán en las notas de versión de la app.</p>
+
+<h2>Contacto</h2>
+<ul>
+<li><strong>App:</strong> ClockFox, registro automático de horas de trabajo</li>
+<li><strong>Responsable del tratamiento:</strong> Amir Alagic, enskild firma (empresario individual), Suecia</li>
+<li><strong>Correo electrónico:</strong> <a href="mailto:support@korlogg.com">support@korlogg.com</a></li>
+</ul>
+<p><em>ClockFox no está vinculada a ningún empleador, sindicato, proveedor de nóminas ni autoridad.</em></p>
+</div><p class="foot">© 2026 Amir Alagic · Suecia · <a href="mailto:support@korlogg.com">support@korlogg.com</a></p></div></body></html>
